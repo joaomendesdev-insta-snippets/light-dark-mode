@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(9, 6, 25)
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+p,
+li {
+    font-size: 14px !important;
+}
+
+#profile-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    color: black;
+    position: relative;
+    transition: background-color .2s linear;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-bio {
+    font-size: 16px;
+    color: #999999;
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile-section-content {
+    list-style: none;
+}
+
+.profile-section-content li {
+    margin-bottom: 5px;
+}
+
+#toogle {
+    width: 40px;
+    height: 20px;
+    border-radius: 50px;
+    border: 2px solid black;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 0 5px;
+    transition: border .2s ease-out;
+    cursor: pointer;
+}
+
+#toogle img {
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    left: '5px';
+    transform: translateY(-50%);
+    transition: left .2s linear;
+}

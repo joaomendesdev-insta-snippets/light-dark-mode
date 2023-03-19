@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="profile-container">
+        <div id="toogle" onclick="changeMode()">
+            <img id="modeImg" src="light.png" />
+        </div>
+
+        <div class="profile-header">
+            <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Profile Picture" class="profile-picture">
+            <div>
+                <h1 class="profile-name">John Doe</h1>
+                <p class="profile-bio">Software Engineer</p>
+            </div>
+        </div>
+        <div class="profile-content">
+            <div class="profile-section">
+                <h2 class="profile-section-title">About Me</h2>
+                <p class="profile-section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed
+                    ligula ac dolor volutpat iaculis. Nulla facilisi. Sed sagittis ultrices nunc, sit amet varius magna
+                    vestibulum et.</p>
+            </div>
+            <div class="profile-section">
+                <h2 class="profile-section-title">Skills</h2>
+                <ul class="profile-section-content">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+            </div>
+            <div class="profile-section">
+                <h2 class="profile-section-title">Education</h2>
+                <ul class="profile-section-content">
+                    <li>Bachelor's degree in Computer Science, XYZ University</li>
+                    <li>Master's degree in Computer Science, ABC University</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    let mode = 'light'
+    function changeMode() {
+        if (mode === 'light') {
+            document.getElementById('toogle').style.border = '2px solid white'
+            document.getElementById('modeImg').style.left = '35px'
+            document.getElementById('modeImg').src = 'dark.png'
+            document.getElementById('profile-container').style.backgroundColor = '#0F0F0F'
+
+            let tags = document.querySelectorAll("h1, h2, p, li")
+            for (let i = 0; i < tags.length; i++) {
+                tags[i].style.color = "white";
+            }
+
+            mode = 'dark'
+        } else {
+            document.getElementById('toogle').style.border = '2px solid black'
+            document.getElementById('modeImg').style.left = '5px'
+            document.getElementById('modeImg').src = 'light.png'
+
+            document.getElementById('profile-container').style.backgroundColor = 'white'
+
+            let tags = document.querySelectorAll("h1, h2, p, li")
+            for (let i = 0; i < tags.length; i++) {
+                tags[i].style.color = "black";
+            }
+            mode = 'light'
+        }
+    }
+</script>
+
+</html>
